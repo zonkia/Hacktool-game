@@ -16,6 +16,7 @@ import random
 sprPoziomu = 1
 while sprPoziomu > 0:
     poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+    print()
     try:
         poziom = int(poziom)
         if (poziom == 1):
@@ -43,7 +44,7 @@ while sprPoziomu > 0:
 
 iteracjeZnak = 1
 while iteracjeZnak > 0:
-    x = random.randrange(poziom * -50000, poziom * 50000)
+    x = random.randrange(poziom * (-50000), poziom * 50000)
     if x != 0:
         iteracjeZnak -= 1
 
@@ -55,8 +56,14 @@ else:
 zapytanie = 1
 iloscZagran = 0
 
+wins = 0
+
 while zapytanie > 0:
-    
+    print()
+
+    if wins == 10:
+        print("Kapralu Kox! Wyrazy najwyższego uznania za odwagę i wierną służbę kosmosowi! Otrzymujesz order Pierduti Gilitari oraz uścisk dłoni od Króla Kosmosu")
+
     iloscZagran += 1
 
     a = input("Twoja " + str(iloscZagran) + " próba: ")
@@ -3468,6 +3475,8 @@ while zapytanie > 0:
         else:
             if (iloscZagran < 20):
                 print("GRATULACJE Kapralu Kox!!! FANFARY!!! Potrzebowałeś/łaś tylko ", iloscZagran," prób by wygrać i ocalić kosmos oraz bezpośrednie okolice! Tak trzymać!")
+                wins += 1
+                print("Dotychczasowa liczba zwycięstw: ",wins)
                 print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                 reset = input().upper()
                 if reset == "TAK":
@@ -3515,6 +3524,8 @@ while zapytanie > 0:
                     print("Rozumiem Kapralu - jeden heroiczny czyn na dzień wystarczy. Gdybyś jednak zmienił/a zdanie, to znajdziesz mnie w Kantynie \"Laser\", w której będę opijał (porządnie) nasze zwycięstwo!")
             else:
                 print("GRATULACJE Kapralu Kox!!! FANFARY!!! BYLO BLISKO! Zużyłeś/łaś wszystkie możliwe próby, ale i tak udało Ci się ocalić kosmos oraz bezpośrednie okolice! Następnym razem postaraj się ocalić kosmos szybciej!")
+                wins += 1
+                print("Dotychczasowa liczba zwycięstw: ",wins)
                 print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                 reset = input().upper()
                 if reset == "TAK":
