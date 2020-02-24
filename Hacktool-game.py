@@ -15,7 +15,7 @@ import random
 
 sprPoziomu = 1
 while sprPoziomu > 0:
-    poziom = input("Wpisz poziom trudności: 1 - łatwy, 2 - średni, 3 - trudny: ")
+    poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
     try:
         poziom = int(poziom)
         if (poziom == 1):
@@ -56,6 +56,7 @@ zapytanie = 1
 iloscZagran = 0
 
 while zapytanie > 0:
+    
     iloscZagran += 1
 
     a = input("Twoja " + str(iloscZagran) + " próba: ")
@@ -139,9 +140,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -230,9 +260,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -322,9 +381,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -414,9 +502,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -506,9 +623,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -598,9 +744,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -690,9 +865,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -782,9 +986,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -874,9 +1107,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -966,9 +1228,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -1058,9 +1349,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -1150,9 +1470,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -1242,9 +1591,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -1334,9 +1712,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -1430,9 +1837,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -1521,9 +1957,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -1613,9 +2078,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -1705,9 +2199,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -1797,9 +2320,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -1889,9 +2441,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -1981,9 +2562,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -2073,9 +2683,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -2165,9 +2804,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -2257,9 +2925,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+                        
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -2349,9 +3046,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -2441,9 +3167,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -2533,9 +3288,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -2625,9 +3409,38 @@ while zapytanie > 0:
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
                         if reset == "TAK":
+
+                            sprPoziomu = 1
+                            while sprPoziomu > 0:
+                                poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                                try:
+                                    poziom = int(poziom)
+                                    if (poziom == 1):
+                                        poziomName = "łatwy"
+                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 2):
+                                        poziomName = "średni"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    elif (poziom == 3):
+                                        poziomName = "trudny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        sprPoziomu -= 1
+                                        continue
+                                    else:
+                                        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                        continue
+
+                                except ValueError:
+                                    print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                    continue
+
                             iteracjeZnak = 1
                             while iteracjeZnak > 0:
-                                x = random.randrange(-50000, 50000)
+                                x = random.randrange(poziom * (-50000), poziom * 50000)
                                 if x != 0:
                                     iteracjeZnak -= 1
                             if x > 0:
@@ -2658,9 +3471,38 @@ while zapytanie > 0:
                 print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                 reset = input().upper()
                 if reset == "TAK":
+
+                    sprPoziomu = 1
+                    while sprPoziomu > 0:
+                        poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                        try:
+                            poziom = int(poziom)
+                            if (poziom == 1):
+                                poziomName = "łatwy"
+                                print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                sprPoziomu -= 1
+                                continue
+                            elif (poziom == 2):
+                                poziomName = "średni"
+                                print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                sprPoziomu -= 1
+                                continue
+                            elif (poziom == 3):
+                                poziomName = "trudny"
+                                print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                sprPoziomu -= 1
+                                continue
+                            else:
+                                print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                continue
+
+                        except ValueError:
+                            print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                            continue
+
                     iteracjeZnak = 1
                     while iteracjeZnak > 0:
-                        x = random.randrange(-50000, 50000)
+                        x = random.randrange(poziom * (-50000), poziom * 50000)
                         if x != 0:
                             iteracjeZnak -= 1
                     if x > 0:
@@ -2676,9 +3518,38 @@ while zapytanie > 0:
                 print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                 reset = input().upper()
                 if reset == "TAK":
+
+                    sprPoziomu = 1
+                    while sprPoziomu > 0:
+                        poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
+                        try:
+                            poziom = int(poziom)
+                            if (poziom == 1):
+                                poziomName = "łatwy"
+                                print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                sprPoziomu -= 1
+                                continue
+                            elif (poziom == 2):
+                                poziomName = "średni"
+                                print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                sprPoziomu -= 1
+                                continue
+                            elif (poziom == 3):
+                                poziomName = "trudny"
+                                print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                sprPoziomu -= 1
+                                continue
+                            else:
+                                print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                                continue
+
+                        except ValueError:
+                            print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
+                            continue
+
                     iteracjeZnak = 1
                     while iteracjeZnak > 0:
-                        x = random.randrange(-50000, 50000)
+                        x = random.randrange(poziom * (-50000), poziom * 50000)
                         if x != 0:
                             iteracjeZnak -= 1
                     if x > 0:
