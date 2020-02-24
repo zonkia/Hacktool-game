@@ -151,7 +151,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -242,7 +242,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -334,7 +334,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -426,7 +426,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -518,7 +518,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -610,7 +610,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -702,7 +702,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -794,7 +794,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -886,7 +886,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -978,7 +978,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -1070,7 +1070,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -1162,7 +1162,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -1254,7 +1254,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -1346,7 +1346,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -1442,7 +1442,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -1533,7 +1533,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -1625,7 +1625,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -1717,7 +1717,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -1809,7 +1809,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -1901,7 +1901,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -1993,7 +1993,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -2085,7 +2085,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -2177,7 +2177,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -2269,7 +2269,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -2361,7 +2361,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -2453,7 +2453,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -2545,7 +2545,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -2637,7 +2637,7 @@ while zapytanie > 0:
                             iloscZagran = 0
                             continue
                         else:
-                            print("W porządku może uda się następnym razem! będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                            print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
                             import os
                             import time
@@ -2670,9 +2670,9 @@ while zapytanie > 0:
                     iloscZagran = 0
                     continue
                 else:
-                    print("Rozumiem Kapralu - jeden heroiczny czyn na dzień wystarczy. Gdybyś jednak zmienił/a zdanie - będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                    print("Rozumiem Kapralu - jeden heroiczny czyn na dzień wystarczy. Gdybyś jednak zmienił/a zdanie, to znajdziesz mnie w Kantynie \"Laser\", w której będę opijał (porządnie) nasze zwycięstwo!")
             else:
-                print("GRATULACJE Kapralu Kox!!! FANFARY!!! BYLO BLISKO! Zużyłeś/łaś wszystkie możliwe próby, ale i tak udało Ci się ocalić kosmos oraz bezpośrednie okolice! Następnym razem postaraj się ocalić kosmos szybciej")
+                print("GRATULACJE Kapralu Kox!!! FANFARY!!! BYLO BLISKO! Zużyłeś/łaś wszystkie możliwe próby, ale i tak udało Ci się ocalić kosmos oraz bezpośrednie okolice! Następnym razem postaraj się ocalić kosmos szybciej!")
                 print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                 reset = input().upper()
                 if reset == "TAK":
@@ -2688,7 +2688,7 @@ while zapytanie > 0:
                     iloscZagran = 0
                     continue
                 else:
-                    print("Rozumiem Kapralu - jeden heroiczny czyn na dzień wystarczy. Gdybyś jednak zmienił/a zdanie - będę opijał (porządnie) nasze zwycięstwo w Kantynie \"Laser\"")
+                    print("Rozumiem Kapralu - jeden heroiczny czyn na dzień wystarczy. Gdybyś jednak zmienił/a zdanie, to znajdziesz mnie w Kantynie \"Laser\", w której będę opijał (porządnie) nasze zwycięstwo!")
             import os
             import time
             from datetime import datetime
