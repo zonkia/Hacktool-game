@@ -8,11 +8,6 @@ print("Pierwsza informacja jaką zdobył Szeregowy Bomba brzmi: \"Mamy do czynie
 """
 print("INFO NA START: wynik \"0\" oznacza, że poszukiwany klucz jest w zasięgu plus lub minus 1000")
 """
-<<<<<<< HEAD
-
-=======
-print("test")
->>>>>>> 59f223009d968281fd4516ff290e7f684de29e0b
 
 import math
 import time
