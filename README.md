@@ -1,2 +1,0 @@
-# Hacktool-game
-Hacktool game
