@@ -34,11 +34,11 @@ while sprPoziomu > 0:
             sprPoziomu -= 1
             continue
         else:
-            print("Poziom trudności kosmosu może być tylko cyframi: 1, 2 lub 3")
+            print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
             continue
 
     except ValueError:
-        print("Poziom trudności kosmosu może być tylko cyframi: 1, 2 lub 3")
+        print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
         continue
 
 iteracjeZnak = 1
