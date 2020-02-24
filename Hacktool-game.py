@@ -20,7 +20,7 @@ while sprPoziomu > 0:
         poziom = int(poziom)
         if (poziom == 1):
             poziomName = "łatwy"
-            print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+            print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
             sprPoziomu -= 1
             continue
         elif (poziom == 2):
