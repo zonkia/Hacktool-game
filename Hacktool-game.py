@@ -12,26 +12,33 @@ print("INFO NA START: wynik \"0\" oznacza, że poszukiwany klucz jest w zasięgu
 import math
 import time
 import random
+import os
+import time
+from datetime import datetime
+from threading import Timer
+
+def exitfunc():
+    os._exit(0)
 
 sprPoziomu = 1
 while sprPoziomu > 0:
-    poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
     print()
+    poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
     try:
         poziom = int(poziom)
         if (poziom == 1):
             poziomName = "normalny"
-            print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+            print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
             sprPoziomu -= 1
             continue
         elif (poziom == 2):
             poziomName = "trudny"
-            print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+            print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
             sprPoziomu -= 1
             continue
         elif (poziom == 3):
             poziomName = "koszmarnie trudny"
-            print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+            print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
             sprPoziomu -= 1
             continue
         else:
@@ -57,12 +64,24 @@ zapytanie = 1
 iloscZagran = 0
 
 wins = 0
+loses = 0
+bilans = 0
 
 while zapytanie > 0:
-    print()
+    print(x)
+    print("Ilość zwycięstw: ",wins," | Ilość porażek: ",loses," | BILANS: ",bilans)
+    bilans = wins - loses
 
-    if wins == 10:
-        print("Kapralu Kox! Wyrazy najwyższego uznania za odwagę i wierną służbę kosmosowi! Otrzymujesz order Pierduti Gilitari oraz uścisk dłoni od Króla Kosmosu")
+    if wins == 5:
+        print("Kapralu Kox! Niesamowity wynik! Tak dalej, a otrzymacie najwyższe odznaczenie w kosmosie oraz dostąpicie niesamowitego zaszczytu z rąk samego Króla Kosmosu we własnej osobie!")
+    elif wins == 10:
+        print("Kapralu Kox! Wyrazy najwyższego uznania za odwagę i wierną służbę kosmosowi! Otrzymujecie order Pierduti Gilitari oraz UŚCISK DŁONI od samego Króla Kosmosu we własnej osobie! Królowa kosmosu puściła Tobie oczko - Hmmm")
+    elif wins == 15:
+        print("Przybywasz do pałacu Króla Kosmosu, po odbiór kolejnej nagrody, ale nie widać go w sali tronowej. Nagle pojawia się Królowa Kosmosu - \"Oh Kapralu Kox, jak Kosmos mógłby Ci się odwdzięczyć... Król Kosmosu pewnie dałby Ci kolejny medal, ale ja wolę dać Tobie coś czego nigdy nie zapomnisz.\" Jak powiedziała tak też zrobiła. Królowa obsłużyła Cię na iście królewskim poziomie i przez chwilę nawet się zakochałeś. Podczaj wychodzenia z pałacu zauważasz 19-letnią córkę Królowej, która jest ostra jak żyleta i widać, że też lubi ruch. Ale to już historia na zupełnie inną grę :) KONIEC")
+
+        Timer(20, exitfunc).start()
+        while True:
+            time.sleep(1)
 
     iloscZagran += 1
 
@@ -146,8 +165,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -155,17 +175,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -190,12 +210,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -266,8 +282,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -275,17 +292,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -310,12 +327,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -387,8 +400,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -396,17 +410,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -431,12 +445,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -508,8 +518,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -517,17 +528,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -552,12 +563,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -629,8 +636,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -638,17 +646,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -673,12 +681,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -750,8 +754,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -759,17 +764,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -794,12 +799,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -871,8 +872,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -880,17 +882,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -915,12 +917,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -992,8 +990,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -1001,17 +1000,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -1036,12 +1035,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -1113,8 +1108,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -1122,17 +1118,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -1157,12 +1153,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -1234,8 +1226,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -1243,17 +1236,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -1278,12 +1271,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -1355,8 +1344,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -1364,17 +1354,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -1399,12 +1389,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -1476,8 +1462,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -1485,17 +1472,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -1520,12 +1507,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -1597,8 +1580,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -1606,17 +1590,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -1641,12 +1625,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -1718,8 +1698,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -1727,17 +1708,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -1762,12 +1743,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -1843,8 +1820,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -1852,17 +1830,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -1887,12 +1865,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -1963,8 +1937,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -1972,17 +1947,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -2007,12 +1982,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -2084,8 +2055,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -2093,17 +2065,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -2128,12 +2100,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -2205,8 +2173,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -2214,17 +2183,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -2249,12 +2218,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -2326,8 +2291,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -2335,17 +2301,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -2370,12 +2336,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -2447,8 +2409,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -2456,17 +2419,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -2491,12 +2454,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -2568,8 +2527,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -2577,17 +2537,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -2612,12 +2572,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -2689,8 +2645,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -2698,17 +2655,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -2733,12 +2690,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -2810,8 +2763,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -2819,17 +2773,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -2854,12 +2808,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -2931,8 +2881,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -2940,17 +2891,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -2975,12 +2926,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -3052,8 +2999,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -3061,17 +3009,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -3096,12 +3044,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -3173,8 +3117,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -3182,17 +3127,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -3217,12 +3162,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -3294,8 +3235,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -3303,17 +3245,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -3338,12 +3280,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -3415,8 +3353,9 @@ while zapytanie > 0:
                         print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
                         print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                         reset = input().upper()
+                        loses += 1
                         if reset == "TAK":
-
+                            print()
                             sprPoziomu = 1
                             while sprPoziomu > 0:
                                 poziom = input("Wpisz poziom trudności: 1 - normalny, 2 - trudny, 3 - koszmarnie trudny: ")
@@ -3424,17 +3363,17 @@ while zapytanie > 0:
                                     poziom = int(poziom)
                                     if (poziom == 1):
                                         poziomName = "normalny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
                                         poziomName = "trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
                                         poziomName = "koszmarnie trudny"
-                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                        print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
                                     else:
@@ -3459,12 +3398,8 @@ while zapytanie > 0:
                         else:
                             print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
                             zapytanie = 0
-                            import os
-                            import time
-                            from datetime import datetime
-                            from threading import Timer
-                            def exitfunc():
-                                os._exit(0)
+
+
 
                             Timer(10, exitfunc).start()
                             while True:
@@ -3474,9 +3409,8 @@ while zapytanie > 0:
 
         else:
             if (iloscZagran < 20):
-                print("GRATULACJE Kapralu Kox!!! FANFARY!!! Potrzebowałeś/łaś tylko ", iloscZagran," prób by wygrać i ocalić kosmos oraz bezpośrednie okolice! Tak trzymać!")
+                print("GRATULACJE Kapralu Kox!!! FANFARY!!! Potrzebowałeś tylko ", iloscZagran," prób by wygrać i ocalić kosmos oraz bezpośrednie okolice! Tak trzymać!")
                 wins += 1
-                print("Dotychczasowa liczba zwycięstw: ",wins)
                 print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                 reset = input().upper()
                 if reset == "TAK":
@@ -3488,17 +3422,17 @@ while zapytanie > 0:
                             poziom = int(poziom)
                             if (poziom == 1):
                                 poziomName = "normalny"
-                                print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                 sprPoziomu -= 1
                                 continue
                             elif (poziom == 2):
                                 poziomName = "trudny"
-                                print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                 sprPoziomu -= 1
                                 continue
                             elif (poziom == 3):
                                 poziomName = "koszmarnie trudny"
-                                print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                 sprPoziomu -= 1
                                 continue
                             else:
@@ -3523,9 +3457,8 @@ while zapytanie > 0:
                 else:
                     print("Rozumiem Kapralu - jeden heroiczny czyn na dzień wystarczy. Gdybyś jednak zmienił/a zdanie, to znajdziesz mnie w Kantynie \"Laser\", w której będę opijał (porządnie) nasze zwycięstwo!")
             else:
-                print("GRATULACJE Kapralu Kox!!! FANFARY!!! BYLO BLISKO! Zużyłeś/łaś wszystkie możliwe próby, ale i tak udało Ci się ocalić kosmos oraz bezpośrednie okolice! Następnym razem postaraj się ocalić kosmos szybciej!")
+                print("GRATULACJE Kapralu Kox!!! FANFARY!!! BYŁO BLISKO! Zużyłeś wszystkie możliwe próby, ale i tak udało Ci się ocalić kosmos oraz bezpośrednie okolice! Następnym razem postaraj się ocalić kosmos szybciej!")
                 wins += 1
-                print("Dotychczasowa liczba zwycięstw: ",wins)
                 print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                 reset = input().upper()
                 if reset == "TAK":
@@ -3537,17 +3470,17 @@ while zapytanie > 0:
                             poziom = int(poziom)
                             if (poziom == 1):
                                 poziomName = "normalny"
-                                print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                 sprPoziomu -= 1
                                 continue
                             elif (poziom == 2):
                                 poziomName = "trudny"
-                                print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
+                                print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                 sprPoziomu -= 1
                                 continue
                             elif (poziom == 3):
                                 poziomName = "koszmarnie trudny"
-                                print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
+                                print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                 sprPoziomu -= 1
                                 continue
                             else:
@@ -3571,12 +3504,8 @@ while zapytanie > 0:
                     continue
                 else:
                     print("Rozumiem Kapralu - jeden heroiczny czyn na dzień wystarczy. Gdybyś jednak zmienił/a zdanie, to znajdziesz mnie w Kantynie \"Laser\", w której będę opijał (porządnie) nasze zwycięstwo!")
-            import os
-            import time
-            from datetime import datetime
-            from threading import Timer
-            def exitfunc():
-                os._exit(0)
+
+
             Timer(10, exitfunc).start()
             while True:
                 time.sleep(1)
