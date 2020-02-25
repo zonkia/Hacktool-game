@@ -20,17 +20,17 @@ while sprPoziomu > 0:
     try:
         poziom = int(poziom)
         if (poziom == 1):
-            poziomName = "łatwy"
-            print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+            poziomName = "normalny"
+            print("Wybrano ,poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
             sprPoziomu -= 1
             continue
         elif (poziom == 2):
-            poziomName = "średni"
+            poziomName = "trudny"
             print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
             sprPoziomu -= 1
             continue
         elif (poziom == 3):
-            poziomName = "trudny"
+            poziomName = "koszmarnie trudny"
             print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
             sprPoziomu -= 1
             continue
@@ -154,17 +154,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -274,17 +274,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -395,17 +395,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -516,17 +516,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -637,17 +637,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -758,17 +758,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -879,17 +879,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -1000,17 +1000,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -1121,17 +1121,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -1242,17 +1242,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -1363,17 +1363,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -1484,17 +1484,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -1605,17 +1605,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -1726,17 +1726,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -1851,17 +1851,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -1971,17 +1971,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -2092,17 +2092,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -2213,17 +2213,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -2334,17 +2334,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -2455,17 +2455,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -2576,17 +2576,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -2697,17 +2697,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -2818,17 +2818,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -2939,17 +2939,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -3060,17 +3060,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -3181,17 +3181,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -3302,17 +3302,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -3423,17 +3423,17 @@ while zapytanie > 0:
                                 try:
                                     poziom = int(poziom)
                                     if (poziom == 1):
-                                        poziomName = "łatwy"
-                                        print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                        poziomName = "normalny"
+                                        print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 2):
-                                        poziomName = "średni"
+                                        poziomName = "trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                         sprPoziomu -= 1
                                         continue
                                     elif (poziom == 3):
-                                        poziomName = "trudny"
+                                        poziomName = "koszmarnie trudny"
                                         print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                         sprPoziomu -= 1
                                         continue
@@ -3487,17 +3487,17 @@ while zapytanie > 0:
                         try:
                             poziom = int(poziom)
                             if (poziom == 1):
-                                poziomName = "łatwy"
-                                print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                poziomName = "normalny"
+                                print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                 sprPoziomu -= 1
                                 continue
                             elif (poziom == 2):
-                                poziomName = "średni"
+                                poziomName = "trudny"
                                 print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                 sprPoziomu -= 1
                                 continue
                             elif (poziom == 3):
-                                poziomName = "trudny"
+                                poziomName = "koszmarnie trudny"
                                 print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                 sprPoziomu -= 1
                                 continue
@@ -3536,17 +3536,17 @@ while zapytanie > 0:
                         try:
                             poziom = int(poziom)
                             if (poziom == 1):
-                                poziomName = "łatwy"
-                                print("Wybrano \"",poziomName,"\" poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
+                                poziomName = "normalny"
+                                print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                                 sprPoziomu -= 1
                                 continue
                             elif (poziom == 2):
-                                poziomName = "średni"
+                                poziomName = "trudny"
                                 print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                                 sprPoziomu -= 1
                                 continue
                             elif (poziom == 3):
-                                poziomName = "trudny"
+                                poziomName = "koszmarnie trudny"
                                 print("Wybrano ",poziomName," poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                                 sprPoziomu -= 1
                                 continue
