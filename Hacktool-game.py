@@ -161,13 +161,11 @@ poziom = poziomyFunkcja()
 x = xFunkcja()
 znak = znakFunkcja()
 
-
-
-
+"""
+Main loop
+"""
 
 while zapytanie > 0:
-    print(x)
-
 
     if wins == 5:
         print("Kapralu Kox! Niesamowity wynik! Tak dalej, a otrzymacie najwyższe odznaczenie w kosmosie oraz dostąpicie niesamowitego zaszczytu z rąk samego Króla Kosmosu we własnej osobie!")
