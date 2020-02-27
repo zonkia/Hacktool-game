@@ -5,9 +5,6 @@ print()
 print("UWAGA WAŻNE:")
 print("Im więcej plusów pokaże HACKTOOL, tym bliżej złamania kodu, im więcej minusów tym dalej - np. jeśli będziesz DOŚC BLISKO shakowania to zobaczysz \"0++\", a będąc BARDZO DALEKO zobaczysz \"------0\"")
 print("Pierwsza informacja jaką zdobył Szeregowy Bomba brzmi: \"Mamy do czynienia z przeciwnikiem z antywymiaru - klucz szyfrowania MOZE BYC liczbą ujemną!\"")
-"""
-print("INFO NA START: wynik \"0\" oznacza, że poszukiwany klucz jest w zasięgu plus lub minus 1000")
-"""
 
 import math
 import time
@@ -34,11 +31,9 @@ def rezygnacja():
     print("W porządku może uda się następnym razem! Jak zmienisz zdanie to znajdziesz mnie w Kantynie \"Laser\", w której będę zapijał (porządnie) naszą porażkę")
     global zapytanie
     zapytanie = 0
-
     Timer(5, exitfunc).start()
     while True:
         time.sleep(1)
-
 
 def zagrania5():
     print("Kapitan Wieśniak przyniósł raport, który może Ciebie przybliżyć do rozwiązania - chcesz go poznać? TAK/NIE")
@@ -47,7 +42,6 @@ def zagrania5():
         print("Liczba jest",znak)
     else:
         print("No dobra cwaniaku próbuj dalej. Kosmos i okolice trzymają kciuki")
-
 
 def zagrania10():
     print("Sierżant Gigusław zameldował o kolejnych postępach wywiadu! Chcesz się dowiedzieć co zameldował? TAK/NIE")
@@ -65,7 +59,6 @@ def zagrania10():
     else:
         print("Widzę, że nie boisz się ryzyka! Próbuj dalej, ale pamiętaj o jednym: Cały kosmos jest zagrożony")
 
-
 def zagrania15():
     print("Generał Hausztajn rzuca jakimiś papierami i wydziera się, że to Twoja ostatnia szansa! Chcesz poznać jakie informacje zdobył? TAK/NIE")
     odp = input().upper()
@@ -81,7 +74,6 @@ def zagrania15():
                 print("Tajny kod mieści się w zakresie od ",str(x-zakresA)," do ",str(x+zakresB))
     else:
         print("Ty zwariowany wariacie! Wygląda na to, że już po kosmosie...")
-
 
 def zagrania19():
     print("Doktor Queen wbiega w ostatniej chwili i krzyczy: \"KAPRALU! UDAŁO MI SIĘ ZDOBYĆ PIĘCIOLICZBOWY ZAKRES MOŻLIWYCH KLUCZY!\" Czy chcesz poznać ten zakres? TAK/NIE")
@@ -106,7 +98,6 @@ def zagrania20(loses):
     bilans = wins - loses   
     print("Ilość zwycięstw: ",wins," | Ilość porażek: ",loses," | BILANS: ",bilans)
     print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
-   
 
 def poziomyFunkcja():
     sprPoziomu = 1
@@ -120,23 +111,19 @@ def poziomyFunkcja():
                 print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie nadal jest wyzwaniem!")
                 sprPoziomu -= 1
                 return poziom
-                
             elif (poziom == 2):
                 poziomName = "trudny"
                 print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie może przysporzyć bólu głowy!")
                 sprPoziomu -= 1
                 return poziom
-                
             elif (poziom == 3):
                 poziomName = "koszmarnie trudny"
                 print("Wybrano",poziomName,"poziom trudności. Ocalenie kosmosu na tym poziomie jest prawie niemożliwe!")
                 sprPoziomu -= 1
                 return poziom
-                
             else:
                 print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
                 continue
-
         except ValueError:
             print("Poziom trudności kosmosu może być tylko cyframi: \"1\", \"2\" lub \"3\"")
             continue
@@ -169,11 +156,9 @@ znak = znakFunkcja()
 Main loop
 """
 
-
 while zapytanie > 0:
     listaZlamanychKodow.append(poprzedniZlamanyKod)
     listaPrzegranychKodow.append(poprzedniPrzegranyKod)
-
     if (poprzedniPrzegranyKod == "brak") and (poprzedniZlamanyKod == "brak"):
         pass
     else:
@@ -188,26 +173,21 @@ while zapytanie > 0:
         except:
             pass
         print("Dotychczas złamałane kody: ",listaZlamanychKodow," Dotychczas NIE złamane kody: ",listaPrzegranychKodow)
- 
     if wins == 5:
         print("Kapralu Kox! Niesamowity wynik! Tak dalej, a otrzymacie najwyższe odznaczenie w kosmosie oraz dostąpicie niesamowitego zaszczytu z rąk samego Króla Kosmosu we własnej osobie!")
     elif wins == 10:
         print("Kapralu Kox! Wyrazy najwyższego uznania za odwagę i wierną służbę kosmosowi! Otrzymujecie order Pierduti Gilitari oraz UŚCISK DŁONI od samego Króla Kosmosu we własnej osobie! Królowa kosmosu puściła Tobie oczko - Hmmm")
     elif wins == 15:
         print("Przybywasz do pałacu Króla Kosmosu, po odbiór kolejnej nagrody, ale nie widać go w sali tronowej. Wtem pojawia się Królowa Kosmosu - \"Oh Kapralu Kox, jak Kosmos mógłby Ci się odwdzięczyć... Król Kosmosu pewnie dałby Ci kolejny medal, ale ja wolę dać Tobie coś czego nigdy nie zapomnisz.\" Jak powiedziała tak też zrobiła. Królowa obsłużyła Cię na iście królewskim poziomie i przez chwilę nawet się zakochałeś. Podczas wychodzenia z pałacu zauważasz 19-letnią córkę Królowej, która jest ostra jak żyleta i widać, że też lubi ruch. Wasze spojrzenia się spotkały. Postanawiasz podejść... Ale to już historia na zupełnie inną grę :) KONIEC")
-
         Timer(20, exitfunc).start()
         while True:
             time.sleep(1)
-
     iloscZagran += 1
-
     a = input("Twoja " + str(iloscZagran) + " próba: ")
 
     try:
         if (int(a) > poziom * 50000) or (int(a) < poziom * (-50000)):
             print("Zbyt duża liczba! Kosmici potrafią tylko liczyć od ", poziom * (-50000)," do +", poziom * 50000)
-
             if iloscZagran == 5:
                 zagrania5()
                 continue
@@ -235,7 +215,6 @@ while zapytanie > 0:
 
     except ValueError:
         print("Musi być liczba całkowita")
- 
         if iloscZagran == 5:
             zagrania5()
             continue
@@ -263,7 +242,6 @@ while zapytanie > 0:
 
     try:
         a = int(a)
-
         if (a > x) or (a < x):
             if a * x < 0:
                 roznica = math.fabs(a) + math.fabs(x)
@@ -294,7 +272,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
                 elif (roznica <= poziom * 20000 and roznica > poziom * 10000):
                     print("------0")
                     if iloscZagran == 5:
@@ -321,7 +298,6 @@ while zapytanie > 0:
                             continue
                         else:
                             rezygnacja()
-
 
                 elif (roznica <= poziom * 10000 and roznica > poziom * 5000):
                     print("---0")
@@ -350,8 +326,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
-
                 elif (roznica <= poziom * 5000 and roznica > poziom * 2500):
                     print("--0")
                     if iloscZagran == 5:
@@ -378,8 +352,6 @@ while zapytanie > 0:
                             continue
                         else:
                             rezygnacja()
-
-
 
                 elif (roznica <= poziom * 2500 and roznica > poziom * 1000):
                     print("-0")
@@ -408,8 +380,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
-
                 elif (roznica <= poziom * 1000 and roznica > poziom * 500):
                     print("0")
                     if iloscZagran == 5:
@@ -436,8 +406,6 @@ while zapytanie > 0:
                             continue
                         else:
                             rezygnacja()
-
-
 
                 elif (roznica <= poziom * 500 and roznica > poziom * 250):
                     print("0+")
@@ -466,8 +434,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
-
                 elif (roznica <= poziom * 250 and roznica > poziom * 100):
                     print("0++")
                     if iloscZagran == 5:
@@ -494,8 +460,6 @@ while zapytanie > 0:
                             continue
                         else:
                             rezygnacja()
-
-
 
                 elif (roznica <= poziom * 100 and roznica > poziom * 50):
                     print("0+++")
@@ -524,8 +488,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
-
                 elif (roznica <= poziom * 50 and roznica > poziom * 25):
                     print("0++++")
                     if iloscZagran == 5:
@@ -552,8 +514,6 @@ while zapytanie > 0:
                             continue
                         else:
                             rezygnacja()
-
-
 
                 elif (roznica <= poziom * 25 and roznica > poziom * 10):
                     print("0++++++")
@@ -582,8 +542,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
-
                 elif (roznica <= poziom * 10 and roznica > poziom * 5):
                     print("0++++++++++++")
                     if iloscZagran == 5:
@@ -610,8 +568,6 @@ while zapytanie > 0:
                             continue
                         else:
                             rezygnacja()
-
-
 
                 elif (roznica <= poziom * 5 and roznica > poziom * 3):
                     print("0++++++++++++++++++++++++")
@@ -640,8 +596,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
-
                 elif (roznica <= poziom * 3 and roznica > poziom * 0):
                     print("0++++++++++++++++++++++++++++++++++++++++++++++++")
                     if iloscZagran == 5:
@@ -668,10 +622,6 @@ while zapytanie > 0:
                             continue
                         else:
                             rezygnacja()
-
-
-
-
 
             else:
                 roznica = math.fabs(a - x)
@@ -702,7 +652,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
                 elif (roznica <= poziom * 20000 and roznica > poziom * 10000):
                     print("------0")
                     if iloscZagran == 5:
@@ -729,8 +678,6 @@ while zapytanie > 0:
                             continue
                         else:
                             rezygnacja()
-
-
 
                 elif (roznica <= poziom * 10000 and roznica > poziom * 5000):
                     print("---0")
@@ -759,8 +706,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
-
                 elif (roznica <= poziom * 5000 and roznica > poziom * 2500):
                     print("--0")
                     if iloscZagran == 5:
@@ -787,8 +732,6 @@ while zapytanie > 0:
                             continue
                         else:
                             rezygnacja()
-
-
 
                 elif (roznica <= poziom * 2500 and roznica > poziom * 1000):
                     print("-0")
@@ -817,8 +760,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
-
                 elif (roznica <= poziom * 1000 and roznica > poziom * 500):
                     print("0")
                     if iloscZagran == 5:
@@ -845,8 +786,6 @@ while zapytanie > 0:
                             continue
                         else:
                             rezygnacja()
-
-
 
                 elif (roznica <= poziom * 500 and roznica > poziom * 250):
                     print("0+")
@@ -875,8 +814,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
-
                 elif (roznica <= poziom * 250 and roznica > poziom * 100):
                     print("0++")
                     if iloscZagran == 5:
@@ -904,8 +841,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
-
                 elif (roznica <= poziom * 100 and roznica > poziom * 50):
                     print("0+++")
                     if iloscZagran == 5:
@@ -932,8 +867,6 @@ while zapytanie > 0:
                             continue
                         else:
                             rezygnacja()
-
-
 
                 elif (roznica <= poziom * 50 and roznica > poziom * 25):
                     print("0++++")
@@ -963,8 +896,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
-
                 elif (roznica <= poziom * 25 and roznica > poziom * 10):
                     print("0++++++")
                     if iloscZagran == 5:
@@ -991,8 +922,6 @@ while zapytanie > 0:
                             continue
                         else:
                             rezygnacja()
-
-
 
                 elif (roznica <= poziom * 10 and roznica > poziom * 5):
                     print("0++++++++++++")
@@ -1021,8 +950,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
-
                 elif (roznica <= poziom * 5 and roznica > poziom * 3):
                     print("0++++++++++++++++++++++++")
                     if iloscZagran == 5:
@@ -1049,8 +976,6 @@ while zapytanie > 0:
                             continue
                         else:
                             rezygnacja()
-
-
 
                 elif (roznica <= poziom * 3 and roznica > poziom * 0):
                     print("0++++++++++++++++++++++++++++++++++++++++++++++++")
@@ -1079,8 +1004,6 @@ while zapytanie > 0:
                         else:
                             rezygnacja()
 
-
-
         else:
             if (iloscZagran < 20):
                 print("GRATULACJE Kapralu Kox!!! FANFARY!!! Potrzebowałeś tylko ", iloscZagran," prób by wygrać i ocalić kosmos oraz bezpośrednie okolice! Tak trzymać!")
@@ -1090,7 +1013,6 @@ while zapytanie > 0:
                 reset = input().upper()
                 if reset == "TAK":
                     winsFunkcja(wins, loses)
-                    
                     poziom = poziomyFunkcja()
                     x = xFunkcja()
                     iloscZagran = 0
@@ -1105,15 +1027,12 @@ while zapytanie > 0:
                 reset = input().upper()
                 if reset == "TAK":
                     winsFunkcja(wins, loses)
-                    
                     poziom = poziomyFunkcja()
                     x = xFunkcja()
                     iloscZagran = 0
-
                     continue
                 else:
                     print("Rozumiem Kapralu - jeden heroiczny czyn na dzień wystarczy. Gdybyś jednak zmienił/a zdanie, to znajdziesz mnie w Kantynie \"Laser\", w której będę opijał (porządnie) nasze zwycięstwo!")
-
 
             Timer(10, exitfunc).start()
             while True:
