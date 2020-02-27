@@ -24,6 +24,24 @@ poprzedniZlamanyKod = "brak"
 listaZlamanychKodow = []
 listaPrzegranychKodow = []
 
+def listaFunkcja():
+    listaZlamanychKodow.append(poprzedniZlamanyKod)
+    listaPrzegranychKodow.append(poprzedniPrzegranyKod)
+    if (poprzedniPrzegranyKod == "brak") and (poprzedniZlamanyKod == "brak"):
+        pass
+    else:
+        try:
+            while "brak" in listaZlamanychKodow:
+                listaZlamanychKodow.remove("brak")
+        except:
+            pass
+        try:
+            while "brak" in listaPrzegranychKodow:
+                listaPrzegranychKodow.remove("brak")
+        except:
+            pass
+        print("Dotychczas złamałane kody: ",listaZlamanychKodow," Dotychczas NIE złamane kody: ",listaPrzegranychKodow)
+
 def exitfunc():
     os._exit(0)
 
@@ -157,22 +175,7 @@ Main loop
 """
 
 while zapytanie > 0:
-    listaZlamanychKodow.append(poprzedniZlamanyKod)
-    listaPrzegranychKodow.append(poprzedniPrzegranyKod)
-    if (poprzedniPrzegranyKod == "brak") and (poprzedniZlamanyKod == "brak"):
-        pass
-    else:
-        try:
-            while "brak" in listaZlamanychKodow:
-                listaZlamanychKodow.remove("brak")
-        except:
-            pass
-        try:
-            while "brak" in listaPrzegranychKodow:
-                listaPrzegranychKodow.remove("brak")
-        except:
-            pass
-        print("Dotychczas złamałane kody: ",listaZlamanychKodow," Dotychczas NIE złamane kody: ",listaPrzegranychKodow)
+
     if wins == 5:
         print("Kapralu Kox! Niesamowity wynik! Tak dalej, a otrzymacie najwyższe odznaczenie w kosmosie oraz dostąpicie niesamowitego zaszczytu z rąk samego Króla Kosmosu we własnej osobie!")
     elif wins == 10:
@@ -204,6 +207,8 @@ while zapytanie > 0:
                 zagrania20(loses)
                 reset = input().upper()
                 if reset == "TAK":
+                    print()
+                    listaFunkcja()
                     poziom = poziomyFunkcja()
                     x = xFunkcja()
                     iloscZagran = 0
@@ -231,6 +236,8 @@ while zapytanie > 0:
             zagrania20(loses)
             reset = input().upper()
             if reset == "TAK":
+                print()
+                listaFunkcja()
                 poziom = poziomyFunkcja()
                 x = xFunkcja()
                 iloscZagran = 0
@@ -264,6 +271,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -291,6 +299,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -318,6 +327,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -345,6 +355,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -372,6 +383,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -399,6 +411,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -426,6 +439,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -453,6 +467,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -480,6 +495,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -507,6 +523,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -534,6 +551,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -561,6 +579,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -588,6 +607,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -615,6 +635,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -644,6 +665,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -671,6 +693,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -698,6 +721,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -725,6 +749,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -752,6 +777,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -779,6 +805,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -806,6 +833,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -833,6 +861,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -860,6 +889,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -915,6 +945,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -942,6 +973,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -969,6 +1001,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -996,6 +1029,7 @@ while zapytanie > 0:
                         reset = input().upper()
                         if reset == "TAK":
                             print()
+                            listaFunkcja()
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
@@ -1012,6 +1046,7 @@ while zapytanie > 0:
                 print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                 reset = input().upper()
                 if reset == "TAK":
+                    print()
                     winsFunkcja(wins, loses)
                     poziom = poziomyFunkcja()
                     x = xFunkcja()
@@ -1026,6 +1061,7 @@ while zapytanie > 0:
                 print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                 reset = input().upper()
                 if reset == "TAK":
+                    print()
                     winsFunkcja(wins, loses)
                     poziom = poziomyFunkcja()
                     x = xFunkcja()
