@@ -24,6 +24,8 @@ zapytanie = 1
 iloscZagran = 0
 poprzedniPrzegranyKod = "brak"
 poprzedniZlamanyKod = "brak"
+listaZlamanychKodow = []
+listaPrzegranychKodow = []
 
 def exitfunc():
     os._exit(0)
@@ -166,8 +168,7 @@ znak = znakFunkcja()
 """
 Main loop
 """
-listaZlamanychKodow = []
-listaPrzegranychKodow = []
+
 
 while zapytanie > 0:
     listaZlamanychKodow.append(poprzedniZlamanyKod)
