@@ -176,9 +176,9 @@ while zapytanie > 0:
     if wins == 5:
         print("Kapralu Kox! Niesamowity wynik! Tak dalej, a otrzymacie najwyższe odznaczenie w kosmosie oraz dostąpicie niesamowitego zaszczytu z rąk samego Króla Kosmosu we własnej osobie!")
     elif wins == 10:
-        print("Kapralu Kox! Wyrazy najwyższego uznania za odwagę i wierną służbę kosmosowi! Otrzymujecie order Pierduti Gilitari oraz UŚCISK DŁONI od samego Króla Kosmosu we własnej osobie! Królowa kosmosu puściła Tobie oczko - Hmmm")
+        print("Kapralu Kox! Wyrazy najwyższego uznania za odwagę i wierną służbę kosmosowi! Otrzymujecie order Pierduti Kosmosari oraz UŚCISK DŁONI od samego Króla Kosmosu we własnej osobie! Królowa kosmosu jest wyraźnie pod wrażeniem")
     elif wins == 15:
-        print("Przybywasz do pałacu Króla Kosmosu, po odbiór kolejnej nagrody, ale nie widać go w sali tronowej. Wtem pojawia się Królowa Kosmosu - \"Oh Kapralu Kox, jak Kosmos mógłby Ci się odwdzięczyć... Król Kosmosu pewnie dałby Ci kolejny medal, ale ja wolę dać Tobie coś czego nigdy nie zapomnisz.\" Jak powiedziała tak też zrobiła. Królowa obsłużyła Cię na iście królewskim poziomie i przez chwilę nawet się zakochałeś. Podczas wychodzenia z pałacu zauważasz 19-letnią córkę Królowej, która jest ostra jak żyleta i widać, że też lubi ruch. Wasze spojrzenia się spotkały. Postanawiasz podejść... Ale to już historia na zupełnie inną grę :) KONIEC")
+        print("Przybywasz do pałacu Króla Kosmosu, po odbiór kolejnej nagrody, ale nie ma go w sali tronowej. Wtem pojawia się Królowa Kosmosu i... <CENZURA> KONIEC :)")
         Timer(20, exitfunc).start()
         while True:
             time.sleep(1)
