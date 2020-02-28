@@ -30,6 +30,7 @@ def listaFunkcja():
     if (poprzedniPrzegranyKod == "brak") and (poprzedniZlamanyKod == "brak"):
         pass
     else:
+        print()
         try:
             while "brak" in listaZlamanychKodow:
                 listaZlamanychKodow.remove("brak")
@@ -40,7 +41,11 @@ def listaFunkcja():
                 listaPrzegranychKodow.remove("brak")
         except:
             pass
-        print("Dotychczas złamałane kody: ",listaZlamanychKodow," Dotychczas NIE złamane kody: ",listaPrzegranychKodow)
+        unikalneZlamane = set(listaZlamanychKodow)
+        unikalnePrzegrane = set(listaPrzegranychKodow)
+        listaOstZlamane = list(unikalneZlamane)
+        listaOstPrzegrane = list(unikalnePrzegrane)
+        print("Dotychczas złamałane kody: ",listaOstZlamane," Dotychczas NIE złamane kody: ",listaOstPrzegrane)
 
 def exitfunc():
     os._exit(0)
@@ -113,8 +118,7 @@ def zagrania20(loses):
     print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
     print()
     loses += 1
-    bilans = wins - loses   
-    print("Ilość zwycięstw: ",wins," | Ilość porażek: ",loses," | BILANS: ",bilans)
+    bilans = wins - loses
     print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
 
 def poziomyFunkcja():
@@ -175,7 +179,7 @@ Main loop
 """
 
 while zapytanie > 0:
-
+    print()
     if wins == 5:
         print("Kapralu Kox! Niesamowity wynik! Tak dalej, a otrzymacie najwyższe odznaczenie w kosmosie oraz dostąpicie niesamowitego zaszczytu z rąk samego Króla Kosmosu we własnej osobie!")
     elif wins == 10:
@@ -207,12 +211,12 @@ while zapytanie > 0:
                 zagrania20(loses)
                 reset = input().upper()
                 if reset == "TAK":
-                    print()
+                    poprzedniPrzegranyKod = x
                     listaFunkcja()
+                    winsFunkcja(wins, loses)
                     poziom = poziomyFunkcja()
                     x = xFunkcja()
                     iloscZagran = 0
-                    poprzedniPrzegranyKod = x
                     continue
                 else:
                     rezygnacja()
@@ -236,12 +240,12 @@ while zapytanie > 0:
             zagrania20(loses)
             reset = input().upper()
             if reset == "TAK":
-                print()
+                poprzedniPrzegranyKod = x
                 listaFunkcja()
+                winsFunkcja(wins, loses)
                 poziom = poziomyFunkcja()
                 x = xFunkcja()
                 iloscZagran = 0
-                poprzedniPrzegranyKod = x
                 continue
             else:
                 rezygnacja()
@@ -270,12 +274,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -298,12 +302,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -326,12 +330,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -354,12 +358,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -382,12 +386,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -410,12 +414,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -438,12 +442,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -466,12 +470,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -494,12 +498,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -522,12 +526,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -550,12 +554,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -578,12 +582,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -606,12 +610,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -634,12 +638,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -664,12 +668,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -692,12 +696,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -720,12 +724,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -748,12 +752,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -776,12 +780,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -804,12 +808,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -832,12 +836,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -860,12 +864,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -888,12 +892,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -916,7 +920,6 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
                             poziomyFunkcja()
                         
                             znakFunkcja()
@@ -944,12 +947,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -972,12 +975,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -1000,12 +1003,12 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
@@ -1028,25 +1031,28 @@ while zapytanie > 0:
                         zagrania20(loses)
                         reset = input().upper()
                         if reset == "TAK":
-                            print()
+                            poprzedniPrzegranyKod = x
                             listaFunkcja()
+                            winsFunkcja(wins, loses)
                             poziom = poziomyFunkcja()
                             x = xFunkcja()
                             iloscZagran = 0
-                            poprzedniPrzegranyKod = x
                             continue
                         else:
                             rezygnacja()
 
         else:
             if (iloscZagran < 20):
+                print()
                 print("GRATULACJE Kapralu Kox!!! FANFARY!!! Potrzebowałeś tylko ", iloscZagran," prób by wygrać i ocalić kosmos oraz bezpośrednie okolice! Tak trzymać!")
                 wins += 1
                 poprzedniZlamanyKod = x
                 print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                 reset = input().upper()
                 if reset == "TAK":
-                    print()
+
+                    poprzedniZlamanyKod = x
+                    listaFunkcja()
                     winsFunkcja(wins, loses)
                     poziom = poziomyFunkcja()
                     x = xFunkcja()
@@ -1055,13 +1061,16 @@ while zapytanie > 0:
                 else:
                     print("Rozumiem Kapralu - jeden heroiczny czyn na dzień wystarczy. Gdybyś jednak zmienił/a zdanie, to znajdziesz mnie w Kantynie \"Laser\", w której będę opijał (porządnie) nasze zwycięstwo!")
             else:
+                print()
                 print("GRATULACJE Kapralu Kox!!! FANFARY!!! BYŁO BLISKO! Zużyłeś wszystkie możliwe próby, ale i tak udało Ci się ocalić kosmos oraz bezpośrednie okolice! Następnym razem postaraj się ocalić kosmos szybciej!")
                 wins += 1
                 poprzedniZlamanyKod = x
                 print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                 reset = input().upper()
                 if reset == "TAK":
-                    print()
+
+                    poprzedniZlamanyKod = x
+                    listaFunkcja()
                     winsFunkcja(wins, loses)
                     poziom = poziomyFunkcja()
                     x = xFunkcja()
