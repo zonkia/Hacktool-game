@@ -19,26 +19,26 @@ loses = 0
 bilans = 0
 zapytanie = 1
 iloscZagran = 0
-poprzedniPrzegranyKod = "brak"
-poprzedniZlamanyKod = "brak"
+poprzedniPrzegranyKod = None
+poprzedniZlamanyKod = None
 listaZlamanychKodow = []
 listaPrzegranychKodow = []
 
 def listaFunkcja():
     listaZlamanychKodow.append(poprzedniZlamanyKod)
     listaPrzegranychKodow.append(poprzedniPrzegranyKod)
-    if (poprzedniPrzegranyKod == "brak") and (poprzedniZlamanyKod == "brak"):
+    if (poprzedniPrzegranyKod == None) and (poprzedniZlamanyKod == None):
         pass
     else:
         print()
         try:
-            while "brak" in listaZlamanychKodow:
-                listaZlamanychKodow.remove("brak")
+            while None in listaZlamanychKodow:
+                listaZlamanychKodow.remove(None)
         except:
             pass
         try:
-            while "brak" in listaPrzegranychKodow:
-                listaPrzegranychKodow.remove("brak")
+            while None in listaPrzegranychKodow:
+                listaPrzegranychKodow.remove(None)
         except:
             pass
         unikalneZlamane = set(listaZlamanychKodow)
@@ -118,8 +118,8 @@ def zagrania20(loses):
     print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
     print()
     loses += 1
-    bilans = wins - loses
     print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
+    return loses
 
 def poziomyFunkcja():
     sprPoziomu = 1
