@@ -45,6 +45,8 @@ def listaFunkcja():
         unikalnePrzegrane = set(listaPrzegranychKodow)
         listaOstZlamane = list(unikalneZlamane)
         listaOstPrzegrane = list(unikalnePrzegrane)
+        listaOstZlamane.sort()
+        listaOstPrzegrane.sort()      
         print("Dotychczas złamałane kody: ",listaOstZlamane," Dotychczas NIE złamane kody: ",listaOstPrzegrane)
 
 def exitfunc():
@@ -74,11 +76,14 @@ def zagrania10():
         zakresII = poziom * 10000 - zakresI
         if x > poziom * 40000 or x < poziom * (-40000):
             if x > 0:
-                print("Tajny kod mieści się w zakresie od :", poziom * 40000," do + ", poziom * 50000)
+                print("Tajny kod mieści się w zakresie od :", poziom * 40000," do ", poziom * 50000)
             else:
-                print("Tajny kod mieści się w zakresie od :", poziom * (-40000)," do + ", poziom * (-50000))
+                print("Tajny kod mieści się w zakresie od :", poziom * (-50000)," do ", poziom * (-40000))
         else:
-            print("Tajny kod mieści się w zakresie od ",str(x-zakresI)," do ",str(x+zakresII))
+            if (x - zakresI < x + zakresII):
+                print("Tajny kod mieści się w zakresie od ",str(x - zakresI)," do ",str(x + zakresII))
+            else:
+                print("Tajny kod mieści się w zakresie od ",str(x + zakresII)," do ",str(x - zakresI))
     else:
         print("Widzę, że nie boisz się ryzyka! Próbuj dalej, ale pamiętaj o jednym: Cały kosmos jest zagrożony")
 
@@ -92,9 +97,12 @@ def zagrania15():
             if x > 0:
                 print("Tajny kod mieści się w zakresie od :", poziom * 49000," do + ", poziom * 50000)
             else:
-                print("Tajny kod mieści się w zakresie od :", poziom * (-49000)," do + ", poziom * (-50000))
+                print("Tajny kod mieści się w zakresie od :", poziom * (-50000)," do + ", poziom * (-49000))
         else:
-                print("Tajny kod mieści się w zakresie od ",str(x-zakresA)," do ",str(x+zakresB))
+            if (x - zakresA < x + zakresB):
+                print("Tajny kod mieści się w zakresie od ",str(x - zakresA)," do ",str(x + zakresB))
+            else:
+                print("Tajny kod mieści się w zakresie od ",str(x + zakresB)," do ",str(x - zakresA))
     else:
         print("Ty zwariowany wariacie! Wygląda na to, że już po kosmosie...")
 
@@ -104,13 +112,16 @@ def zagrania19():
     if (odp == "TAK"):
         zakres1 = random.randrange(1,5)
         zakres2 = 5 - zakres1
-        if x > poziom * 49995 or x < poziom * (-49995):
+        if x > (poziom * 50000) - 5 or x < (poziom * (-50000) + 5):
             if x > 0:
-                print("Tajny kod mieści się w zakresie od :", poziom * 49995," do + ", poziom * 50000)
+                print("Tajny kod mieści się w zakresie od :", (poziom * 50000) - 5," do ", poziom * 50000)
             else:
-                print("Tajny kod mieści się w zakresie od :", poziom * (-49995)," do + ", poziom * (-50000))
+                print("Tajny kod mieści się w zakresie od :", (poziom * (-50000))," do ", poziom * (-50000) + 5)
         else:
-                print("Tajny kod mieści się w zakresie od ",str(x-zakres1)," do ",str(x+zakres2),"- szansa 1/5. Prawie jak rosyjska ruletka! Powodzenia w imieniu całego kosmosu!")
+            if (x - zakres1 < x + zakres2):
+                print("Tajny kod mieści się w zakresie od ",str(x - zakres1)," do ",str(x + zakres2),"- szansa 1/5. Prawie jak rosyjska ruletka! Powodzenia w imieniu całego kosmosu!")
+            else:
+                print("Tajny kod mieści się w zakresie od ",str(x + zakres2)," do ",str(x - zakres1),"- szansa 1/5. Prawie jak rosyjska ruletka! Powodzenia w imieniu całego kosmosu!")
     else:
         print("Myślę, że mogę śmiało stwierdzić, że kosmos jest już skonczony... Zegnaj kosmosie... i okolico!")
 
@@ -179,7 +190,7 @@ Main loop
 """
 
 while zapytanie > 0:
-    print()
+    print(x)
     if wins == 5:
         print("Kapralu Kox! Niesamowity wynik! Tak dalej, a otrzymacie najwyższe odznaczenie w kosmosie oraz dostąpicie niesamowitego zaszczytu z rąk samego Króla Kosmosu we własnej osobie!")
     elif wins == 10:
@@ -1046,11 +1057,9 @@ while zapytanie > 0:
                 print()
                 print("GRATULACJE Kapralu Kox!!! FANFARY!!! Potrzebowałeś tylko ", iloscZagran," prób by wygrać i ocalić kosmos oraz bezpośrednie okolice! Tak trzymać!")
                 wins += 1
-                poprzedniZlamanyKod = x
                 print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                 reset = input().upper()
                 if reset == "TAK":
-
                     poprzedniZlamanyKod = x
                     listaFunkcja()
                     winsFunkcja(wins, loses)
@@ -1064,11 +1073,9 @@ while zapytanie > 0:
                 print()
                 print("GRATULACJE Kapralu Kox!!! FANFARY!!! BYŁO BLISKO! Zużyłeś wszystkie możliwe próby, ale i tak udało Ci się ocalić kosmos oraz bezpośrednie okolice! Następnym razem postaraj się ocalić kosmos szybciej!")
                 wins += 1
-                poprzedniZlamanyKod = x
                 print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
                 reset = input().upper()
                 if reset == "TAK":
-
                     poprzedniZlamanyKod = x
                     listaFunkcja()
                     winsFunkcja(wins, loses)
