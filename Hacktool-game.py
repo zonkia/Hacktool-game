@@ -125,12 +125,10 @@ def zagrania19():
     else:
         print("Myślę, że mogę śmiało stwierdzić, że kosmos jest już skonczony... Zegnaj kosmosie... i okolico!")
 
-def zagrania20(loses):
+def zagrania20():
     print("BUUUUUUUUUUUM!!!!!!!!!!! Nie żyjesz a kosmos legnął w gruzach. THE END. Prawidłowy klucz szyfrowania to :",x)
     print()
-    loses += 1
     print("Doktor Queen właśnie mnie poinformowała, że każdorazowa podróż w czasie zmienia klucz szyfrowania. Kapralu, czy chcesz cofnąć się w czasie i spróbować uratować kosmos jeszcze raz? TAK/NIE")
-    return loses
 
 def poziomyFunkcja():
     sprPoziomu = 1
@@ -190,7 +188,7 @@ Main loop
 """
 
 while zapytanie > 0:
-    print(x)
+    print()
     if wins == 5:
         print("Kapralu Kox! Niesamowity wynik! Tak dalej, a otrzymacie najwyższe odznaczenie w kosmosie oraz dostąpicie niesamowitego zaszczytu z rąk samego Króla Kosmosu we własnej osobie!")
     elif wins == 10:
@@ -219,7 +217,8 @@ while zapytanie > 0:
                 zagrania19()
                 continue
             elif iloscZagran == 20:
-                zagrania20(loses)
+                zagrania20()
+                loses += 1
                 reset = input().upper()
                 if reset == "TAK":
                     poprzedniPrzegranyKod = x
@@ -248,7 +247,8 @@ while zapytanie > 0:
             zagrania19()
             continue
         elif iloscZagran == 20:
-            zagrania20(loses)
+            zagrania20()
+            loses += 1
             reset = input().upper()
             if reset == "TAK":
                 poprzedniPrzegranyKod = x
@@ -282,7 +282,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -310,7 +311,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -338,7 +340,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -366,7 +369,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -394,7 +398,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -422,7 +427,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -450,7 +456,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -478,7 +485,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -506,7 +514,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -534,7 +543,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -562,7 +572,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -590,7 +601,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -618,7 +630,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -646,7 +659,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -676,7 +690,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -704,7 +719,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -732,7 +748,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -760,7 +777,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -788,7 +806,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -816,7 +835,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -844,7 +864,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -872,7 +893,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -900,7 +922,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -928,7 +951,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poziomyFunkcja()
@@ -955,7 +979,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -983,7 +1008,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -1011,7 +1037,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
@@ -1039,7 +1066,8 @@ while zapytanie > 0:
                         zagrania19()
                         continue
                     elif iloscZagran == 20:
-                        zagrania20(loses)
+                        zagrania20()
+                        loses += 1
                         reset = input().upper()
                         if reset == "TAK":
                             poprzedniPrzegranyKod = x
